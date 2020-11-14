@@ -14,7 +14,7 @@ The data have 891 observations with 10 features:
 <li>Ticket</li>	
 <li>Fare</li>	
 <li>Cabin</li>	
-<li>Embarked: Destination<li>
+<li>Embarked: Destination</li>
 </ul>
 
 From these features, I engineered new features:
@@ -31,4 +31,11 @@ Four different machine learning models were chosen:
     <li>Gradient Boosting Classifier: Gradient boosting models take a bunch of weak decision trees and builds on them iteratively, instead of growing full trees at once like in a random forest.</li>
 </ul>
 
-From each of these models, I developed 2 final models, one with all of the models and all of the features, and another one with a subset of features with the most effective model. The latter model proved to have the higher score on the Kaggle leaderboard and only featured 3 variables: whether the passenger was male, whether the passenger was on Deck E, and whether the passenger had 4 or more members in their family aboard. 
+From each of these models, I developed 2 final models, one with all of the models and all of the features, and another one with a subset of features with the most effective model. The latter model proved to have the higher score on the Kaggle leaderboard and only featured 3 variables: 
+<ol>
+    <li>whether the passenger was male</li>
+    <li>whether the passenger was on Deck E</li>
+    <li>whether the passenger had 4 or more members in their family aboard</li>
+</ol>
+
+
