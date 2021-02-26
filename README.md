@@ -20,22 +20,18 @@ The data have 891 observations with 10 features:
 From these features, I engineered new features:
 <ul><li>Salutation: Status of passenger (i.e. Mr., Mrs., Miss). This was used for imputing missing ages.</li>
 <li>Deck: Determined given the first letter of cabin number.</li>
-<li>Age Bucket: Breaking age into 10 different buckets because age distribution is non-linear.</li>
-<li>Fare Bucket: Breaking fare into 10 different buckets because fare distribution is strongly skewed right.</li></ul>
+<ul>
 
-Four different machine learning models were chosen:
+Six different machine learning models were chosen:
 <ul>
     <li>Logistic Regression: Logistic models assign each observation to a binary outcome, which is helpful given our problem statement.</li>
     <li>Random Forest: Random forests are a series of decision trees with randomly chosen subsets of features. This takes the classic decision tree model and provides a more robust prediction.</li>
     <li>K-Nearest Neighbors: K-Nearest Neighbors is a classification algorithm that assigns classes based on observing the classes of other neighbors. It is useful in this dataset because similar observations are likely to have similar survival rates.</li>
     <li>Gradient Boosting Classifier: Gradient boosting models take a bunch of weak decision trees and builds on them iteratively, instead of growing full trees at once like in a random forest.</li>
+    <li>Support Vector Machine</li>: Support vector machines produce a boundary vector with a maximum amount of separation between positive and negative classes. 
+    <li>XGBoost</li>: XGBoost takes the gradient boosting classifier model with additional hyperparameters.
 </ul>
 
-From each of these models, I developed 2 final models, one with all of the models and all of the features, and another one with a subset of features with the most effective model. The latter model proved to have the higher score on the Kaggle leaderboard and only featured 3 variables: 
-<ol>
-    <li>whether the passenger was male</li>
-    <li>whether the passenger was on Deck E</li>
-    <li>whether the passenger had 4 or more members in their family aboard</li>
-</ol>
+The models were then combined to create a stacked classifier that ended up having a better prediction on the Kaggle test set than any of the individual models.
 
 
